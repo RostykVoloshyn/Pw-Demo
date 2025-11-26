@@ -17,3 +17,4 @@ Before running the tests, you need to start the test application:
 NOTE:
 
 All tests ale located in ```tests``` subfolder under ```pw-practice-app``` and ```PW-APITEST-APP``` folders
+The test application is taken from the internet and is used for learning purposes
