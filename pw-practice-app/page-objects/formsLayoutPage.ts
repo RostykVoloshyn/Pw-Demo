@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test'
 import { HelperBase } from './helperBase'
+import { time } from 'console'
 
 export class FormsLayoutPage extends HelperBase {
 
@@ -13,6 +14,7 @@ export class FormsLayoutPage extends HelperBase {
         await usingTheGridForm.locator('#inputEmail1').fill(email)
         //await emailFiled.clear()
         //await emailFiled.fill(email)
+
         await usingTheGridForm.locator('#inputPassword2').fill(password)
         //await passwordField.clear()
         //await passwordField.fill(password)

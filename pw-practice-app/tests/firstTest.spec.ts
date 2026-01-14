@@ -147,7 +147,7 @@ test('extracting values', async ({ page }) => {
 
     //all text values
     const radioButtonsValues = await page.locator('nb-radio').allTextContents()
-    await expect(radioButtonsValues).toContain('Option 19')
+    await expect(radioButtonsValues).toContain('Option 1')
 
     //input values
     const emailFiled = page.locator('#exampleInputEmail1')

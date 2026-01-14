@@ -18,4 +18,4 @@ test('Drag and Drop', async ({ page, globalSQaURL }) => {
     await expect(frame.locator('#trash li h5')).toHaveText(["High Tatras 2", "High Tatras 4"])
 
 
-})
+});

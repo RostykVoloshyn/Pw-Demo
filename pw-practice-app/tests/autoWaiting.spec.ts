@@ -1,10 +1,10 @@
-import { test, expect } from '@playwright/test';
+import { expect } from '@playwright/test'
+import { test } from '../test-options'
 
 
+test.beforeEach(async ({ page,uiPlayGround}, testInfo) => {
 
-test.beforeEach(async ({ page}, testInfo) => {
-
-    await page.goto(process.env.URL)
+    await page.goto(uiPlayGround)
     await page.locator('#ajaxButton').click();
     //overiding the timeout for the whole test suite
     //testInfo.setTimeout(testInfo.timeout + 2000)

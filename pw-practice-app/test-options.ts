@@ -5,11 +5,13 @@ import { tr } from '@faker-js/faker/.'
 export type TestOptions = {
     globalSQaURL: string,
     formsLayoutPage: string,
-    PageManager: PageManager
+    PageManager: PageManager,
+    uiPlayGround: string
 }
 
 export const test = base.extend<TestOptions>({
     globalSQaURL: ['', { option: true }],
+    uiPlayGround: ['', { option: true }],
 
     // formsLayoutPage: [async ({ page }, use) => {
     //     await page.goto('/');
@@ -19,7 +21,7 @@ export const test = base.extend<TestOptions>({
 
     // }, { auto: true }],
 
-    PageManager: async ({page}, use) => {
+    PageManager: async ({ page }, use) => {
         const pm = new PageManager(page)
         await use(pm)
 

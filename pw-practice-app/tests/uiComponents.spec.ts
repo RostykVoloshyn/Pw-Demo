@@ -34,7 +34,7 @@ test.describe.only('Form layouts page', () => {
         expect(inputValue).toEqual('test@test.com')
 
         //locator assertion
-        await expect(usingTheGrideEmailField).toHaveValue('test@test1.com')
+        await expect(usingTheGrideEmailField).toHaveValue('test@test.com')
 
     })
 
