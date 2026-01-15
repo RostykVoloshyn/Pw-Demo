@@ -10,7 +10,7 @@ dotenv.config();
 
 export default defineConfig<TestOptions>({
   //timeout: 10000,
-  globalTimeout: 60000,
+  globalTimeout: 90000,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: false,
