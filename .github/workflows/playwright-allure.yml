@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 
 jobs:
-  build:
+  start:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -22,37 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm ci --force
 
-      - name: Build application
-        run: npm run build
-
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-build
-          path: pw-practice-app/dist
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: pw-practice-app
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm ci --force
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: app-build
-          path: pw-practice-app/dist
+      - name: Satrt the application
+        run: npm start
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
@@ -68,4 +39,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: pw-practice-app/allure-report        
+          path: pw-practice-app/allure-report 
