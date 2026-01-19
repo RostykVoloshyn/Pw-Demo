@@ -23,7 +23,7 @@ export class NavigationPage extends HelperBase{
     }
     async dataPickerPage() {
         await this.selectGroupMenurItem('Forms')
-        await this.page.getByTitle('Datepicker1').click()
+        await this.page.getByTitle('Datepicker').click()
 
     }
 
