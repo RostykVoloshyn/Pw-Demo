@@ -5,9 +5,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 jobs:
   start:
     runs-on: ubuntu-latest
@@ -56,5 +53,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: pw-practice-app/allure-report
-          publish_branch: main
 
