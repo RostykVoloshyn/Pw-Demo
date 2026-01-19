@@ -1,8 +1,13 @@
 name: Playwright Tests with Allure Report
 
 on:
-  workflow_dispatch
-
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
   start:
     runs-on: ubuntu-latest
