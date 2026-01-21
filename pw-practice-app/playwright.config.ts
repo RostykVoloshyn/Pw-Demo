@@ -22,26 +22,26 @@ export default defineConfig<TestOptions>({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
 
-   webServer: {
+  webServer: {
     command: 'npm start',
     url: 'http://localhost:4200',
     timeout: 120 * 1000,
     reuseExistingServer: false,
   },
   reporter: [
-    ["html"], 
-    ["allure-playwright",{
+    ["html"],
+    ["allure-playwright", {
       resultsDir: "allure-results",
-        detail: true,
-        suiteTitle: false,
+      detail: true,
+      suiteTitle: false,
     }]
-],
+  ],
   use: {
     globalSQaURL: 'https://www.globalsqa.com/demo-site/draganddrop/',
     uiPlayGround: 'http://uitestingplayground.com/ajax',
     baseURL: process.env.DEV === '1' ? 'http://localhost:4200/'
-          : process.env.STAGE === '2' ? 'http://localhost:4202/'
-          : 'http://localhost:4200/',
+      : process.env.STAGE === '2' ? 'http://localhost:4202/'
+        : 'http://localhost:4200/',
     trace: 'on-first-retry',
     video: {
       mode: 'off',
