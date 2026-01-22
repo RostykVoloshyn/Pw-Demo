@@ -56,11 +56,19 @@ jobs:
       - name: Generate Allure report
         run: allure generate allure-results --clean -o allure-report
 
-      - name: Upload Allure report
-        uses: actions/upload-artifact@v4
-        with:
-          name: allure-report
-          path: pw-practice-app/allure-report 
+      - name: Disable Jekyll
+        run: touch allure-report/.nojekyll
+
+      - name: Add build timestamp
+        run: |
+          BUILD_TIME=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          sed -i "s/<title>Allure Report<\/title>/<title>Allure Report - $BUILD_TIME<\/title>/" allure-report/index.html  
+
+      # - name: Upload Allure report
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: allure-report
+      #     path: pw-practice-app/allure-report 
 
       - name: Deploy Allure report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
