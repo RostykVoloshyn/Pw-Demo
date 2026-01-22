@@ -59,6 +59,10 @@ jobs:
       - name: Disable Jekyll
         run: touch allure-report/.nojekyll
 
+      - name: Prevent GitHub Pages caching
+        run: |
+          echo -e "/*\n  Cache-Control: no-cache\n" > allure-report/.headers  
+
       - name: Add build timestamp
         run: |
           BUILD_TIME=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
