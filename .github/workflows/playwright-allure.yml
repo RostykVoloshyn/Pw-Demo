@@ -31,7 +31,7 @@ jobs:
         run: npm ci --force
 
       - name: Install Allure CLI
-        run: npm install -g allure-commandline           
+        run: npm install --save-dev allure-commandline          
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
@@ -67,4 +67,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: pw-practice-app/allure-report
+          force_orphan: true
 
