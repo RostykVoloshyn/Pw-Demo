@@ -31,7 +31,7 @@ jobs:
         run: npm ci --force
 
       - name: Install Allure CLI
-        run: npm install --save-dev allure-commandline          
+        run: npm install -g allure-commandline         
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
