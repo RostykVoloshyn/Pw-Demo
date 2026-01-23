@@ -48,9 +48,9 @@ jobs:
 
       - name: Restore Allure history
         run: |
-          if [ -d gh-pages/allure-report/history ]; then
+          if [ -d gh-pages/history ]; then
           mkdir -p allure-results/history
-          cp -R gh-pages/allure-report/history/* allure-results/history/
+          cp -R gh-pages/history/* allure-results/history/
           fi 
 
       - name: Generate Allure report
