@@ -74,7 +74,7 @@ jobs:
       #     name: allure-report
       #     path: pw-practice-app/allure-report 
 
-      - name: Deploy Allure report to GitHub Pages
+      - name: Deploy Allure report to GitHub Pagesd
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
