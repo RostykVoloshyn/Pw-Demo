@@ -73,7 +73,7 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy Allure history
+      - name: Copy Allure historyy
         run: |
           if [ -d "gh-pages/history" ]; then
             echo "History found. Copying..."
