@@ -42,7 +42,7 @@ jobs:
         run: DEV=1 npx playwright test usePageObject.spec.ts --project=chromium
         continue-on-error: true
 
-      - name: Upload Allure report
+      - name: Upload Allure results
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
@@ -56,12 +56,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # - name: Restore Allure history
-      #   run: |
-      #     if [ -d allure-report/history ]; then
-      #     mkdir -p allure-results/history
-      #     cp -R allure-report/history/* allure-results/history/
-      #     fi
       - name: Download Allure results
         uses: actions/download-artifact@v4
         with:
@@ -75,15 +69,22 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy Allure historyy
+      # - name: Copy Allure historyy
+      #   run: |
+      #     if [ -d "gh-pages/history" ]; then
+      #       echo "History found. Copying..."
+      #       mkdir -p ./allure-results/history
+      #       cp -r gh-pages/history/* ./allure-results/history || true
+      #     else
+      #       echo "No history found. First run?"
+      #     fi
+
+      - name: Restore Allure history
         run: |
-          if [ -d "gh-pages/history" ]; then
-            echo "History found. Copying..."
-            mkdir -p ./allure-results/history
-            cp -r gh-pages/history/* ./allure-results/history || true
-          else
-            echo "No history found. First run?"
-          fi
+          if [ -d allure-report/history ]; then
+          mkdir -p allure-results/history
+          cp -R allure-report/history/* allure-results/history/
+          fi    
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline   
