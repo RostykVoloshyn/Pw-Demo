@@ -65,32 +65,32 @@ jobs:
           name: allure-results
           path: pw-practice-app/allure-results
 
-      # - name: Checkout gh-pages branch
-      #   uses: actions/checkout@v4
-      #   continue-on-error: true
-      #   with:
-      #     ref: gh-pages
-      #     path: gh-pages
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
 
-      # - name: Copy Allure historyy
-      #   run: |
-      #     if [ -d "gh-pages/history" ]; then
-      #       echo "History found. Copying..."
-      #       mkdir -p ./allure-results/history
-      #       cp -r gh-pages/history/* ./allure-results/history || true
-      #     else
-      #       echo "No history found. First run?"
-      #     fi
-
-      - name: Restore Allure history
+      - name: Copy Allure historyy
         run: |
-          if [ -d allure-report/history ]; then
+          if [ -d "gh-pages/history" ]; then
             echo "History found. Copying..."
-            mkdir -p allure-results/history
-            cp -R allure-report/history/* allure-results/history/
+            mkdir -p ./allure-results/history
+            cp -r gh-pages/history/* ./allure-results/history || true
           else
-           echo "No history found. First run?"
-          fi    
+            echo "No history found. First run?"
+          fi
+
+      # - name: Restore Allure history
+      #   run: |
+      #     if [ -d allure-report/history ]; then
+      #       echo "History found. Copying..."
+      #       mkdir -p allure-results/history
+      #       cp -R allure-report/history/* allure-results/history/
+      #     else
+      #      echo "No history found. First run?"
+      #     fi    
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline   
@@ -120,5 +120,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: pw-practice-app/allure-report
 
