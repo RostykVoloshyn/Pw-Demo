@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1318","Navigate to the Tables & Datapage","chromium","2026-02-26","passed","2026-02-26","","Page navigation tests","",""
+"","5397","Navigation to the all pages","chromium","2026-02-26","passed","2026-02-26","","Page navigation tests","",""
+"","1545","datapicker menthods","chromium","2026-02-26","failed","2026-02-26","","Page navigation tests","",""
+"","1408","parametrized methods","chromium","2026-02-26","passed","2026-02-26","","Page navigation tests","",""
+"","1447","Navigate to the Modal & Overlays page","chromium","2026-02-26","passed","2026-02-26","","Page navigation tests","",""
