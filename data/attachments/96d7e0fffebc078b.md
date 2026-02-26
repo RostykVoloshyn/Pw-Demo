@@ -1,0 +1,226 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e5]:
+  - generic [ref=e7]:
+    - navigation [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]:
+          - generic [ref=e12]:
+            - link [ref=e13] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e15]
+            - link "PW-test" [ref=e23] [cursor=pointer]:
+              - /url: "#"
+          - button "Light" [ref=e25] [cursor=pointer]:
+            - generic [ref=e26]: Light
+            - img [ref=e28]
+        - generic [ref=e34]:
+          - button [ref=e37] [cursor=pointer]:
+            - img [ref=e39]
+          - link [ref=e45] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e47]
+          - link [ref=e53] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e55]
+          - generic [ref=e65] [cursor=pointer]: Nick Jones
+    - generic [ref=e66]:
+      - list [ref=e71]:
+        - listitem [ref=e72]:
+          - link "IoT Dashboard" [ref=e73] [cursor=pointer]:
+            - /url: /pages/iot-dashboard
+            - img [ref=e75]
+            - generic: IoT Dashboard
+        - listitem [ref=e80]:
+          - generic [ref=e81]: FEATURES
+        - listitem [ref=e82]:
+          - link "Forms" [expanded] [ref=e83] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e85]
+            - generic: Forms
+            - img [ref=e92]
+          - list [ref=e97]:
+            - listitem [ref=e98]:
+              - link "Form Layouts" [ref=e99] [cursor=pointer]:
+                - /url: /pages/forms/layouts
+                - generic: Form Layouts
+            - listitem [ref=e100]:
+              - link "Datepicker" [ref=e101] [cursor=pointer]:
+                - /url: /pages/forms/datepicker
+                - generic: Datepicker
+        - listitem [ref=e102]:
+          - link "Modal & Overlays" [ref=e103] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e105]
+            - generic: Modal & Overlays
+            - img [ref=e113]
+          - list:
+            - listitem [ref=e118]:
+              - link "Dialog" [ref=e119] [cursor=pointer]:
+                - /url: /pages/modal-overlays/dialog
+                - generic: Dialog
+            - listitem [ref=e120]:
+              - link "Window" [ref=e121] [cursor=pointer]:
+                - /url: /pages/modal-overlays/window
+                - generic: Window
+            - listitem [ref=e122]:
+              - link "Popover" [ref=e123] [cursor=pointer]:
+                - /url: /pages/modal-overlays/popover
+                - generic: Popover
+            - listitem [ref=e124]:
+              - link "Toastr" [ref=e125] [cursor=pointer]:
+                - /url: /pages/modal-overlays/toastr
+                - generic: Toastr
+            - listitem [ref=e126]:
+              - link "Tooltip" [ref=e127] [cursor=pointer]:
+                - /url: /pages/modal-overlays/tooltip
+                - generic: Tooltip
+        - listitem [ref=e128]:
+          - link "Extra Components" [ref=e129] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e131]
+            - generic: Extra Components
+            - img [ref=e140]
+          - list:
+            - listitem [ref=e145]:
+              - link "Calendar" [ref=e146] [cursor=pointer]:
+                - /url: /pages/extra-components/calendar
+                - generic: Calendar
+        - listitem [ref=e147]:
+          - link "Charts" [ref=e148] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e150]
+            - generic: Charts
+            - img [ref=e157]
+          - list:
+            - listitem [ref=e162]:
+              - link "Echarts" [ref=e163] [cursor=pointer]:
+                - /url: /pages/charts/echarts
+                - generic: Echarts
+        - listitem [ref=e164]:
+          - link "Tables & Data" [ref=e165] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e167]
+            - generic: Tables & Data
+            - img [ref=e176]
+          - list:
+            - listitem [ref=e181]:
+              - link "Smart Table" [ref=e182] [cursor=pointer]:
+                - /url: /pages/tables/smart-table
+                - generic: Smart Table
+            - listitem [ref=e183]:
+              - link "Tree Grid" [ref=e184] [cursor=pointer]:
+                - /url: /pages/tables/tree-grid
+                - generic: Tree Grid
+        - listitem [ref=e185]:
+          - link "Auth" [ref=e186] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e188]
+            - generic: Auth
+            - img [ref=e195]
+          - list:
+            - listitem [ref=e200]:
+              - link "Login" [ref=e201] [cursor=pointer]:
+                - /url: /auth/login
+                - generic: Login
+            - listitem [ref=e202]:
+              - link "Register" [ref=e203] [cursor=pointer]:
+                - /url: /auth/register
+                - generic: Register
+            - listitem [ref=e204]:
+              - link "Request Password" [ref=e205] [cursor=pointer]:
+                - /url: /auth/request-password
+                - generic: Request Password
+            - listitem [ref=e206]:
+              - link "Reset Password" [ref=e207] [cursor=pointer]:
+                - /url: /auth/reset-password
+                - generic: Reset Password
+      - generic [ref=e208]:
+        - generic [ref=e213]:
+          - generic [ref=e215]:
+            - generic [ref=e216]: Common Datepicker
+            - textbox "Form Picker" [ref=e218]
+          - generic [ref=e220]:
+            - generic [ref=e221]: Datepicker With Range
+            - textbox "Range Picker" [ref=e223]
+          - generic [ref=e225]:
+            - generic [ref=e226]: Datepicker With Disabled Min Max Values
+            - textbox "Min Max Picker" [ref=e228]
+        - navigation [ref=e230]:
+          - generic [ref=e231]:
+            - generic [ref=e232]:
+              - text: Created with ♥ by
+              - link "Akveo" [ref=e234] [cursor=pointer]:
+                - /url: https://akveo.page.link/8V2f
+              - text: "2019"
+            - generic [ref=e235]:
+              - link "" [ref=e236] [cursor=pointer]:
+                - /url: "#"
+              - link "" [ref=e237] [cursor=pointer]:
+                - /url: "#"
+              - link "" [ref=e238] [cursor=pointer]:
+                - /url: "#"
+              - link "" [ref=e239] [cursor=pointer]:
+                - /url: "#"
+  - generic [ref=e245]:
+    - generic [ref=e246]:
+      - button "March 2026" [ref=e248] [cursor=pointer]:
+        - text: March 2026
+        - img [ref=e250]
+      - generic [ref=e255]:
+        - button [ref=e256] [cursor=pointer]:
+          - img [ref=e258]
+        - button [active] [ref=e263] [cursor=pointer]:
+          - img [ref=e265]
+    - generic [ref=e272]:
+      - generic [ref=e273]:
+        - generic [ref=e274]: Su
+        - generic [ref=e275]: Mo
+        - generic [ref=e276]: Tu
+        - generic [ref=e277]: We
+        - generic [ref=e278]: Th
+        - generic [ref=e279]: Fr
+        - generic [ref=e280]: Sa
+      - generic [ref=e281]:
+        - generic [ref=e282]:
+          - generic [ref=e284] [cursor=pointer]: "1"
+          - generic [ref=e286] [cursor=pointer]: "2"
+          - generic [ref=e288] [cursor=pointer]: "3"
+          - generic [ref=e290] [cursor=pointer]: "4"
+          - generic [ref=e292] [cursor=pointer]: "5"
+          - generic [ref=e294] [cursor=pointer]: "6"
+          - generic [ref=e296] [cursor=pointer]: "7"
+        - generic [ref=e297]:
+          - generic [ref=e299] [cursor=pointer]: "8"
+          - generic [ref=e301] [cursor=pointer]: "9"
+          - generic [ref=e303] [cursor=pointer]: "10"
+          - generic [ref=e305] [cursor=pointer]: "11"
+          - generic [ref=e307] [cursor=pointer]: "12"
+          - generic [ref=e309] [cursor=pointer]: "13"
+          - generic [ref=e311] [cursor=pointer]: "14"
+        - generic [ref=e312]:
+          - generic [ref=e314] [cursor=pointer]: "15"
+          - generic [ref=e316] [cursor=pointer]: "16"
+          - generic [ref=e318] [cursor=pointer]: "17"
+          - generic [ref=e320] [cursor=pointer]: "18"
+          - generic [ref=e322] [cursor=pointer]: "19"
+          - generic [ref=e324] [cursor=pointer]: "20"
+          - generic [ref=e326] [cursor=pointer]: "21"
+        - generic [ref=e327]:
+          - generic [ref=e329] [cursor=pointer]: "22"
+          - generic [ref=e331] [cursor=pointer]: "23"
+          - generic [ref=e333] [cursor=pointer]: "24"
+          - generic [ref=e335] [cursor=pointer]: "25"
+          - generic [ref=e337] [cursor=pointer]: "26"
+          - generic [ref=e339] [cursor=pointer]: "27"
+          - generic [ref=e341] [cursor=pointer]: "28"
+        - generic [ref=e342]:
+          - generic [ref=e344] [cursor=pointer]: "29"
+          - generic [ref=e346] [cursor=pointer]: "30"
+          - generic [ref=e348] [cursor=pointer]: "31"
+          - generic [ref=e350] [cursor=pointer]: "1"
+          - generic [ref=e352] [cursor=pointer]: "2"
+          - generic [ref=e354] [cursor=pointer]: "3"
+          - generic [ref=e356] [cursor=pointer]: "4"
+```
