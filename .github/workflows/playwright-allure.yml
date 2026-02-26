@@ -51,6 +51,9 @@ jobs:
   generate_report:
     runs-on: ubuntu-latest
     needs: run_tests
+    defaults:
+      run:
+        working-directory: pw-practice-app
 
     steps:
       - name: Checkout repository
@@ -85,8 +88,8 @@ jobs:
             echo "History found. Copying..."
             mkdir -p allure-results/history
             cp -R allure-report/history/* allure-results/history/
-          else:
-            echo "No history found. First run?"
+          else
+           echo "No history found. First run?"
           fi    
 
       - name: Install Allure CLI
