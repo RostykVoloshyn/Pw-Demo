@@ -62,12 +62,12 @@ jobs:
           name: allure-results
           path: pw-practice-app/allure-results
 
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
+      # - name: Checkout gh-pages branch
+      #   uses: actions/checkout@v4
+      #   continue-on-error: true
+      #   with:
+      #     ref: gh-pages
+      #     path: gh-pages
 
       # - name: Copy Allure historyy
       #   run: |
@@ -82,8 +82,11 @@ jobs:
       - name: Restore Allure history
         run: |
           if [ -d allure-report/history ]; then
-          mkdir -p allure-results/history
-          cp -R allure-report/history/* allure-results/history/
+            echo "History found. Copying..."
+            mkdir -p allure-results/history
+            cp -R allure-report/history/* allure-results/history/
+          else:
+            echo "No history found. First run?"
           fi    
 
       - name: Install Allure CLI
@@ -114,6 +117,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
           publish_dir: pw-practice-app/allure-report
 
