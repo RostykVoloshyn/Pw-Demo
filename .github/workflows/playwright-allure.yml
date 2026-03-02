@@ -56,7 +56,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: allure-report
-          path: pw-practice-app/allure-report/history    
+          path: pw-practice-app/allure-report 
 
   generate_report:
     runs-on: ubuntu-latest
