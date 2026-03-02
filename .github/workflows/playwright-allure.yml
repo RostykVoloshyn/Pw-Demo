@@ -48,6 +48,10 @@ jobs:
           name: allure-results
           path: pw-practice-app/allure-results
 
+      - name: Generate Allure report
+        run: allure generate
+        continue-on-error: true
+
       - name: Upload Allure report history
         uses: actions/download-artifact@v4
         with:
