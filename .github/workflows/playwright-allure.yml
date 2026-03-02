@@ -65,6 +65,13 @@ jobs:
           name: allure-results
           path: pw-practice-app/allure-results
 
+      - name: Download Allure report history
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report
+          path: pw-practice-app/allure-report/history
+          
+
       - name: Checkout gh-pages branch
         uses: actions/checkout@v4
         continue-on-error: true
