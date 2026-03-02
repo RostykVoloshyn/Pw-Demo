@@ -56,7 +56,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: pw-practice-app/allure-report 
+          path: pw-practice-app/allure-report/history
 
   generate_report:
     runs-on: ubuntu-latest
@@ -74,6 +74,13 @@ jobs:
         with:
           name: allure-results
           path: pw-practice-app/allure-results
+
+      - name: Download Allure report
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report
+          path: pw-practice-app/allure-report/history
+              
           
 
       - name: Checkout gh-pages branch
@@ -87,8 +94,8 @@ jobs:
         run: |
           if [ -d "gh-pages/history" ]; then
             echo "History found. Copying..."
-            mkdir -p ./allure-results/history
-            cp -r gh-pages/history/* ./allure-results/|| true
+            mkdir -p allure-results/history
+            cp -r gh-pages/pw-practice-app/allure-report/history /allure-results/history|| true
           else
             echo "No history found. First run?"
           fi
