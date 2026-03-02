@@ -90,7 +90,7 @@ jobs:
     - name: Generate Allure report
       run: allure generate allure-results -o allure-report --clean
 
-    - name: Deploy to GitHub Page
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
