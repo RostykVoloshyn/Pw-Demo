@@ -53,7 +53,7 @@ jobs:
         continue-on-error: true
 
       - name: Upload Allure report history
-        uses: actions/download-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: pw-practice-app/allure-report 
